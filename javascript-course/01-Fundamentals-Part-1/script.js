@@ -15,18 +15,44 @@ const johnBMI = johnMass / johnHeight ** 2;
 
 const markHigherBMI = markBMI > johnBMI;
 
-if (markHigherBMI) {
-  console.log(
-    `Mark's BMI (${markBMI.toFixed(
-      2
-    )}) is higher then John's (${johnBMI.toFixed(2)})`
-  );
+// if (markHigherBMI) {
+//   console.log(
+//     `Mark's BMI (${markBMI.toFixed(
+//       2
+//     )}) is higher then John's (${johnBMI.toFixed(2)})`
+//   );
+// } else {
+//   console.log(
+//     `John's BMI (${johnBMI.toFixed(
+//       2
+//     )}) is higher then Mark's (${markBMI.toFixed(2)})`
+//   );
+// }
+
+// Coding Challenge #3
+const dolphinsAvgScore = (97 + 112 + 101) / 3;
+const koalasAvgScore = (109 + 95 + 123) / 3;
+
+if (dolphinsAvgScore === koalasAvgScore) {
+  console.log(`Draw! Both teams have the same score`);
+} else if (dolphinsAvgScore > koalasAvgScore) {
+  console.log(`Congrats to the Dolphins`);
 } else {
-  console.log(
-    `John's BMI (${johnBMI.toFixed(
-      2
-    )}) is higher then Mark's (${markBMI.toFixed(2)})`
-  );
+  console.log(`Congrats to the Koalas`);
 }
 
-console.log();
+if (
+  dolphinsAvgScore === koalasAvgScore &&
+  dolphinsAvgScore > 100 &&
+  koalasAvgScore > 100
+) {
+  console.log(`Draw! Both teams have the same score`);
+} else if (
+  dolphinsAvgScore > koalasAvgScore &&
+  dolphinsAvgScore > 100 &&
+  koalasAvgScore > 100
+) {
+  console.log(`Congrats to the Dolphins`);
+} else {
+  console.log(`Congrats to the Koalas`);
+}
