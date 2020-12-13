@@ -41,3 +41,15 @@ parseInt('42')
 '1' * '2' = 2 // number
 '10' + 20 = '1020' // string
 ```
+
+### Conditionals
+JavaScript will convert any value passed in an if, else if, while or switch statement
+```js
+if(converts to boolean) {
+  // if true, do something
+}
+
+if(Boolean(value) === true) {
+  // if true, do something
+}
+```
