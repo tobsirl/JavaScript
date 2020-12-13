@@ -53,3 +53,14 @@ if(Boolean(value) === true) {
   // if true, do something
 }
 ```
+
+### truthy (true) or falsy (false)
+#### falsy values
+```js
+false
+0
+''
+null
+undefined
+NaN
+```
