@@ -64,3 +64,50 @@ null
 undefined
 NaN
 ```
+### Tips to avoid issues with falsy values
+1. Avoid direct comparisons in conditionals
+```js
+const username = '';
+
+if (username === false) {
+  console.log('no user');
+}
+
+// better way
+if (!username) {
+  console.log('no user');
+}
+```
+2. Use the triple equals === (strict equals operator)
+  
+
+```js 
+// Will log equals because == equals will allow coercion
+if (null == undefined) {
+  console.log('equals');
+} else {
+  console.log('not equals');
+}
+
+// This will also check the type of each value
+if (null == undefined) {
+  console.log('equals');
+} else {
+  console.log('not equals');
+}
+```
+3. Convert to real Boolean values where needed
+```js
+if (NaN === NaN) {
+    console.log('equal')
+} else {
+    console.log('not equals')
+}
+
+// convert both NaNs
+if (Boolean(NaN) === Boolean(NaN)) {
+    console.log('equal')
+} else {
+    console.log('not equals')
+}
+```
