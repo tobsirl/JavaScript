@@ -121,4 +121,11 @@ const username = response ? response : "guest";
 
 // This can be shortened, || operater can provide a default value
 const username = response || "guest";
+
+// Example using the && operater to check multiple conditions
+const response = "Reed";
+const isEmailVerified = true;
+
+// be careful of operator precedence, && has higher predence then ||
+const username = isEmailVerified && response || "guest";
 ```
