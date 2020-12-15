@@ -111,3 +111,14 @@ if (Boolean(NaN) === Boolean(NaN)) {
     console.log('not equals')
 }
 ```
+
+### Conditionals with Short-Circuiting
+```js
+// using a ternarie
+const response = "Keith";
+
+const username = response ? response : "guest";
+
+// This can be shortened, || operater can provide a default value
+const username = response || "guest";
+```
