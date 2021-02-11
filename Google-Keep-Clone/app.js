@@ -18,6 +18,11 @@ class App {
 
       const title = this.$noteTitle.value;
       const text = this.$noteText.value;
+      const hasNote = title || text;
+
+      if (hasNote) {
+        this.addNote({ title, text });
+      }
     });
   }
 
@@ -44,6 +49,8 @@ class App {
     this.$noteTitle.style.display = 'none';
     this.$formButtons.style.display = 'none';
   }
+
+  addNote() {}
 }
 
 new App();
