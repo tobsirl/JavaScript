@@ -11,6 +11,10 @@ class App {
     document.body.addEventListener('click', (event) => {
       this.handleFormClick(event);
     });
+
+    this.$form.addEventListener('submit', (event) => {
+      event.preventDefault();
+    });
   }
 
   handleFormClick(event) {
