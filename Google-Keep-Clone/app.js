@@ -16,6 +16,7 @@ class App {
   addEventListeners() {
     document.body.addEventListener('click', (event) => {
       this.handleFormClick(event);
+      this.openModal(event)
     });
 
     this.$form.addEventListener('submit', (event) => {
@@ -66,6 +67,10 @@ class App {
     this.$formButtons.style.display = 'none';
     this.$noteTitle.value = '';
     this.$noteText.value = '';
+  }
+
+  openModal(event) {
+
   }
 
   addNote({ title, text }) {
