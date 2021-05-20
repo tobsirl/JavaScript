@@ -3,4 +3,7 @@ const user = {
   age: 29,
 };
 
-Object.keys(user); //?
+Object.keys(user).map((el) => user[el]); //?
+
+// Practical use
+const ageExists = Object.keys(user).includes('age'); //?
