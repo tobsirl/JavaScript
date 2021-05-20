@@ -24,6 +24,20 @@ const monthlyTotal = Object.values(monthlyExpenses).reduce(
   0
 ); //?
 
+// Object.entries()
+const users = {
+  1: {
+    name: 'John',
+    age: 29,
+  },
+  2: {
+    name: 'Jane',
+    age: 42,
+  },
+  3: {
+    name: 'Fred',
+    age: 17,
+  },
+};
 
-// Object.entries() 
-Object.entries(user) //?
+Object.entries(users); //?
