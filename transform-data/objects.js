@@ -41,3 +41,10 @@ const users = {
 };
 
 Object.entries(users); //?
+
+Object.entries(users).reduce((acc, [id, user]) => {
+  if (user.age > 20) {
+    acc.push({ ...user, id });
+  }
+  return acc;
+}, []); //?
