@@ -23,3 +23,7 @@ const monthlyTotal = Object.values(monthlyExpenses).reduce(
   (total, expence) => total + expence,
   0
 ); //?
+
+
+// Object.entries() 
+Object.entries(user) //?
