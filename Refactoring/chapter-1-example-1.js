@@ -1,17 +1,18 @@
-const invoice = require('./invoices'); //?
-const plays = require('./plays.json'); //?
+const invoice = require('./invoices.json');
+const plays = require('./plays.json');
 
-invoice.performances //?
+invoice.performances;
 function statement(invoice, plays) {
   let totalAmount = 0;
   let volumeCredits = 0;
-  let result = `Statement for ${invoice.customer}\n`; 
+  let result = `Statement for ${invoice.customer}\n`;
   const format = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
     minimumFractionDigits: 2,
   }).format;
-  for (let perf of invoice.performances) { 
+
+  for (let perf of invoice.performances) {
     const play = plays[perf.playID];
     let thisAmount = 0;
 
@@ -49,4 +50,4 @@ function statement(invoice, plays) {
   return result;
 }
 
-statement(invoice, plays)
+statement(invoice, plays); //?
