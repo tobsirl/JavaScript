@@ -48,3 +48,7 @@ Object.entries(users).reduce((acc, [id, user]) => {
   }
   return acc;
 }, []); //?
+
+Object.entries(users)
+  .map(([id, user]) => user)
+  .filter(() => user.age > 20); //?

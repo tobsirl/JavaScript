@@ -129,3 +129,6 @@ const isEmailVerified = true;
 // be careful of operator precedence, && has higher predence then ||
 const username = isEmailVerified && response || "guest";
 ```
+
+## Functions
+### Closures
