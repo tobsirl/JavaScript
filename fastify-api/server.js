@@ -1,6 +1,10 @@
 const fastify = require('fastify')({logger: true})
 const PORT = 5000
 
+fastify.get('/items', (req, reply) => {
+  reply.send({message: "Hello"})
+})
+
 const start = async() => {
   try {
     await fastify.listen(PORT)
