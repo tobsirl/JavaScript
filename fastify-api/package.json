@@ -2,9 +2,10 @@
   "name": "fastify-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "Paul Tobin <tobster111@gmail.com>",
@@ -13,5 +14,8 @@
     "fastify": "^3.18.1",
     "fastify-swagger": "^4.8.2",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
   }
 }
