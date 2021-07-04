@@ -2,7 +2,7 @@ const items = require('../items');
 
 // Options for get all items
 const getItemsOpts = {
-  scheme: {
+  schema: {
     response: {
       200: {
         type: 'array',
@@ -18,12 +18,26 @@ const getItemsOpts = {
   },
 };
 
+const getItemOpts = {
+  schema: {
+    response: {
+      200: {
+        type: 'object',
+        properties: {
+          id: { type: 'string' },
+          name: { type: 'string' },
+        },
+      },
+    },
+  },
+};
+
 function itemRoutes(fastify, options, done) {
   fastify.get('/items', getItemsOpts, (req, reply) => {
     reply.send(items);
   });
 
-  fastify.get('/items/:id', (req, reply) => {
+  fastify.get('/items/:id', getItemOpts, (req, reply) => {
     const { id } = req.params;
     const item = items.find((item) => item.id === id);
     reply.send(item);
