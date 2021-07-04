@@ -1,25 +1,16 @@
-const fastify = require('fastify')({logger: true})
-const PORT = 5000
+const fastify = require('fastify')({ logger: true });
 
-const items = require('./items')
+fastify.register(require('./routes/items'));
 
-fastify.get('/items', (req, reply) => {
-  reply.send(items)
-})
+const PORT = 5000;
 
-fastify.get('/items/:id', (req, reply) => {
-  const {id} = req.params
-  const item = items.find((item) => item.id === id)
-  reply.send(item)
-})
-
-const start = async() => {
+const start = async () => {
   try {
-    await fastify.listen(PORT)
+    await fastify.listen(PORT);
   } catch (error) {
-    fastify.log.error(error)
-    process.exit(1)
+    fastify.log.error(error);
+    process.exit(1);
   }
-}
+};
 
-start()
+start();
