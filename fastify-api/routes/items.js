@@ -32,9 +32,14 @@ const getItemOpts = {
 };
 
 function itemRoutes(fastify, options, done) {
+  // Get all items
   fastify.get('/items', getItemsOpts);
 
+  // Get a single item
   fastify.get('/items/:id', getItemOpts);
+
+  // Add item
+  fastify.post('/items', postItemOpts)
 
   done();
 }
