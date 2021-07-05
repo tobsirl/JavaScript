@@ -14,10 +14,12 @@ const getItem = (req, reply) => {
 const addItem = (req, reply) => {
   const { name } = req.body;
 
-  reply.send({
+  const item = {
     id: uuidv4(),
     name,
-  });
+  };
+
+  reply.send(item);
 };
 
 module.exports = {
