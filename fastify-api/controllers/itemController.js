@@ -19,6 +19,8 @@ const addItem = (req, reply) => {
     name,
   };
 
+  items = [...items, item];
+
   reply.send(item);
 };
 
