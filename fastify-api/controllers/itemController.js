@@ -1,4 +1,4 @@
-const items = require('../items');
+let items = require('../items');
 const { v4: uuidv4 } = require('uuid');
 
 const getItems = (req, relpy) => {
@@ -21,7 +21,7 @@ const addItem = (req, reply) => {
 
   items = [...items, item];
 
-  reply.send(item);
+  reply.code(201).send(item);
 };
 
 module.exports = {

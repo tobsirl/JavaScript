@@ -6,8 +6,9 @@ GET http://localhost:5000/items/1 HTTP/1.1
 
 ### POST SINGLE ITEM
 POST http://localhost:5000/items HTTP/1.1
-content-type: application/json
+Content-Type: application/json
+
 
 {
-    "name": "Item Four",
+    "name": "Item Four"
 }
