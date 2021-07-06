@@ -66,6 +66,18 @@ const deleteItemOpts = {
   handler: deleteItem,
 };
 
+const updateItemOpts = {
+  schema: {
+    response: {
+      200: {
+        type: 'array',
+        items: Item,
+      },
+    },
+  },
+  handler: updateItem,
+};
+
 function itemRoutes(fastify, options, done) {
   // Get all items
   fastify.get('/items', getItemsOpts);
@@ -79,6 +91,8 @@ function itemRoutes(fastify, options, done) {
   // Delete Item
   fastify.delete('/items/:id', deleteItemOpts);
 
+  // Update Item
+  fastify.put('/items/id', updateItemOpts);
   done();
 }
 
