@@ -57,6 +57,9 @@ function itemRoutes(fastify, options, done) {
   // Add item
   fastify.post('/items', postItemOpts);
 
+  // Delete Item
+  fastify.delete('/items/:id' deleteItemOpts);
+
   done();
 }
 
