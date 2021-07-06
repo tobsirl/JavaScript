@@ -27,9 +27,9 @@ const addItem = (req, reply) => {
 const deleteItem = (req, reply) => {
   const { id } = req.params;
 
-  items.filter((item) => item.id !== id);
+  items = items.filter((item) => item.id !== id);
 
-  reply.code(204).send('Item deleted successfully');
+  reply.send({ message: `Item ${id} has been deleted` });
 };
 
 module.exports = {
