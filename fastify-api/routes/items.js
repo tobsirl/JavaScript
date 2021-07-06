@@ -55,7 +55,12 @@ const postItemOpts = {
 const deleteItemOpts = {
   schema: {
     response: {
-      204: 'Item successfully deleted',
+      204: {
+        type: 'object',
+        properties: {
+          message: { type: 'string' },
+        },
+      },
     },
   },
   handler: deleteItem,
