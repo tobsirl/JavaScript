@@ -20,9 +20,15 @@ console.log(addS('pizza'));
 console.log(addS('bagel'));
 
 // Challenge 3
-function map(array, callback) {}
+function map(array, callback) {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
+}
 
-// console.log(map([1, 2, 3], addTwo));
+console.log(map([1, 2, 3], addTwo));
 
 // Challenge 4
 function forEach(array, callback) {}
