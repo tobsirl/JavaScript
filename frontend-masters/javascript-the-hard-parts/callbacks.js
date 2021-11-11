@@ -31,7 +31,19 @@ function map(array, callback) {
 console.log(map([1, 2, 3], addTwo));
 
 // Challenge 4
-function forEach(array, callback) {}
+let alphabet = '';
+const letters = ['a', 'b', 'c', 'd'];
+function forEach(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
+}
+
+forEach(letters, function (char) {
+  alphabet += char;
+});
+
+console.log(alphabet);
 
 // see for yourself if your forEach works!
 
