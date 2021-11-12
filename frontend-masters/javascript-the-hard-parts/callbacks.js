@@ -48,7 +48,15 @@ console.log(alphabet);
 // see for yourself if your forEach works!
 
 // Challenge 5
-function mapWith(array, callback) {}
+function mapWith(array, callback) {
+  let newArray = [];
+  forEach(array, function (element) {
+    newArray.push(callback(element));
+  });
+  return newArray;
+}
+
+console.log(mapWith([1, 2, 3], addTwo));
 
 // Challenge 6
 function reduce(array, callback, initialValue) {}
