@@ -6,8 +6,8 @@ function createFunction() {
 }
 
 // /*** Uncomment these to check your work! ***/
-const function1 = createFunction();
-function1(); // => should console.log('hello');
+// const function1 = createFunction();
+// function1(); // => should console.log('hello');
 
 // CHALLENGE 2
 function createFunctionPrinter(input) {
@@ -17,10 +17,10 @@ function createFunctionPrinter(input) {
 }
 
 // /*** Uncomment these to check your work! ***/
-const printSample = createFunctionPrinter('sample');
-printSample(); // => should console.log('sample');
-const printHello = createFunctionPrinter('hello');
-printHello(); // => should console.log('hello');
+// const printSample = createFunctionPrinter('sample');
+// printSample(); // => should console.log('sample');
+// const printHello = createFunctionPrinter('hello');
+// printHello(); // => should console.log('hello');
 
 // CHALLENGE 3
 function outer() {
@@ -39,12 +39,12 @@ const jasCounter = outer();
 // Before your do, guess what will be logged from each function call.
 
 // /*** Uncomment these to check your work! ***/
-// willCounter();
-// willCounter();
-// willCounter();
+willCounter();
+willCounter();
+willCounter();
 
-// jasCounter();
-// willCounter();
+jasCounter();
+willCounter();
 
 function addByX(x) {}
 
