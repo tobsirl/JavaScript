@@ -59,7 +59,12 @@ function mapWith(array, callback) {
 console.log(mapWith([1, 2, 3], addTwo));
 
 // Challenge 6
-function reduce(array, callback, initialValue) {}
+function reduce(array, callback, initialValue) {
+  for (const item in array) {
+    initialValue = callback(item, array[item]);
+  }
+  return initialValue;
+}
 
 // Challenge 7
 function intersection(arrays) {}
