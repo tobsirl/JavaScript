@@ -46,13 +46,17 @@ willCounter();
 jasCounter();
 willCounter();
 
-function addByX(x) {}
+function addByX(x) {
+  return function (y) {
+    return x + y;
+  };
+}
 
 // /*** Uncomment these to check your work! ***/
-// const addByTwo = addByX(2);
-// addByTwo(1); // => should return 3
-// addByTwo(2); // => should return 4
-// addByTwo(3); // => should return 5
+const addByTwo = addByX(2);
+console.log(addByTwo(1)); // => should return 3
+console.log(addByTwo(2)); // => should return 4
+addByTwo(3); // => should return 5
 
 // const addByThree = addByX(3);
 // addByThree(1); // => should return 4
