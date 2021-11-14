@@ -25,7 +25,7 @@
 /* CHALLENGE 3 - Create a function helloGoodbye that console logs hello right away, and good bye after 2 seconds. */
 
 // function helloGoodbye() {
-  // ADD CODE HERE
+// ADD CODE HERE
 //   console.log('hello');
 //   setTimeout(function () {
 //     console.log('good bye');
@@ -34,10 +34,17 @@
 // Uncomment the following line to check your work!
 // helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
 
-/* CHALLENGE 4 */
+/* CHALLENGE 4 
+Create a function brokenRecord that console logs hi again every second. 
+Use the End Code button to stop the console logs when you are satisfied that it is working.
+*/
 
 function brokenRecord() {
   // ADD CODE HERE
+  setTimeout(function () {
+    console.log('hi again');
+    brokenRecord();
+  }, 1000);
 }
 // Uncomment the following line to check your work!
 // brokenRecord(); // should log (every second): hi again
