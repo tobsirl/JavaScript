@@ -13,20 +13,24 @@
 
 /* CHALLENGE 2 - Create a function delayedGreet that console logs welcome after 3 seconds. */
 
-function delayedGreet() {
-  // ADD CODE HERE
-  setTimeout(function () {
-    console.log('welcome');
-  }, 3000);
-}
+// function delayedGreet() {
+// ADD CODE HERE
+//   setTimeout(function () {
+//     console.log('welcome');
+//   }, 3000);
+// }
 // Uncomment the following line to check your work!
-delayedGreet(); // should log (after 3 seconds): welcome
+// delayedGreet(); // should log (after 3 seconds): welcome
 
-/* CHALLENGE 3 */
+/* CHALLENGE 3 - Create a function helloGoodbye that console logs hello right away, and good bye after 2 seconds. */
 
-function helloGoodbye() {
+// function helloGoodbye() {
   // ADD CODE HERE
-}
+//   console.log('hello');
+//   setTimeout(function () {
+//     console.log('good bye');
+//   }, 3000);
+// }
 // Uncomment the following line to check your work!
 // helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
 
