@@ -1,23 +1,26 @@
 /* CHALLENGE 1 */
 
-function sayHowdy() {
-  console.log('Howdy');
-}
+// function sayHowdy() {
+//   console.log('Howdy');
+// }
 
-function testMe() {
-  setTimeout(sayHowdy, 0);
-  console.log('Partnah');
-}
+// function testMe() {
+//   setTimeout(sayHowdy, 0);
+//   console.log('Partnah');
+// }
 // After thinking it through, uncomment the following line to check your guess!
-testMe(); // what order should these log out? Howdy or Partnah first?
+// testMe(); // what order should these log out? Howdy or Partnah first?
 
-/* CHALLENGE 2 */
+/* CHALLENGE 2 - Create a function delayedGreet that console logs welcome after 3 seconds. */
 
 function delayedGreet() {
   // ADD CODE HERE
+  setTimeout(function () {
+    console.log('welcome');
+  }, 3000);
 }
 // Uncomment the following line to check your work!
-// delayedGreet(); // should log (after 3 seconds): welcome
+delayedGreet(); // should log (after 3 seconds): welcome
 
 /* CHALLENGE 3 */
 
