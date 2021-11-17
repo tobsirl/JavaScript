@@ -2,12 +2,13 @@
 // Let's start by reviewing asynchronous functions! Using setTimeout, print the string 'Hello!' after 1000ms.
 
 function sayHello() {
-
+  setTimeout(function () {
+    console.log('Hello');
+  }, 1000);
 }
 
 // Uncomment the line below when ready
-// sayHello(); // should log "Hello" after 1000ms
-
+sayHello(); // should log "Hello" after 1000ms
 
 // Challenge 2
 var promise = new Promise(function (resolve, reject) {
@@ -17,16 +18,14 @@ var promise = new Promise(function (resolve, reject) {
 // Should print out "Resolved!"
 // ADD CODE HERE
 
-
 // Challenge 3
 
-promise = new Promise(function(resolve, reject) {
+promise = new Promise(function (resolve, reject) {
   // ADD CODE HERE
-})
+});
 
 // Should print out "Reject!"
 // ADD CODE HERE
-
 
 // Challenge 4
 
@@ -38,16 +37,12 @@ promise = new Promise(function (resolve, reject) {
 // promise.then(() => console.log('Promise has been resolved!'));
 // console.log("I'm not the promise!");
 
-
 // Challenge 5
-function delay(){
-
-}
+function delay() {}
 
 // Uncomment the code below to test
 // This code should log "Hello" after 1000ms
 // delay().then(sayHello);
-
 
 // Challenge 6
 //
@@ -55,13 +50,12 @@ function delay(){
 // var secondPromise =
 // var firstPromise =
 
-
 // Challenge 7
 const fakePeople = [
   { name: 'Rudolph', hasPets: false, currentTemp: 98.6 },
   { name: 'Zebulon', hasPets: true, currentTemp: 22.6 },
   { name: 'Harold', hasPets: true, currentTemp: 98.3 },
-]
+];
 
 const fakeAPICall = (i) => {
   const returnTime = Math.floor(Math.random() * 1000);
@@ -69,7 +63,7 @@ const fakeAPICall = (i) => {
     if (i >= 0 && i < fakePeople.length) {
       setTimeout(() => resolve(fakePeople[i]), returnTime);
     } else {
-      reject({ message: "index out of range" });
+      reject({ message: 'index out of range' });
     }
   });
 };
