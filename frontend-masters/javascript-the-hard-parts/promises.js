@@ -10,7 +10,6 @@ function sayHello() {
 // Uncomment the line below when ready
 sayHello(); // should log "Hello" after 1000ms
 
-
 /*
  *Challenge 2
  * Create a promise. Have it resolve with a value of 'Resolved!' in resolve after a delay of 1000ms, using setTimeout.
@@ -18,10 +17,14 @@ sayHello(); // should log "Hello" after 1000ms
  */
 var promise = new Promise(function (resolve, reject) {
   // ADD CODE HERE
+  setTimeout(() => {
+    resolve('Resolved');
+  }, 1000);
 });
 
 // Should print out "Resolved!"
 // ADD CODE HERE
+promise.then((data) => console.log(data));
 
 // Challenge 3
 
