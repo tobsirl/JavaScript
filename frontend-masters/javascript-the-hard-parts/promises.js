@@ -34,10 +34,12 @@ promise.then((data) => console.log(data));
 
 promise = new Promise(function (resolve, reject) {
   // ADD CODE HERE
+  reject('Reject!');
 });
 
 // Should print out "Reject!"
 // ADD CODE HERE
+promise.catch((res) => console.log(res));
 
 // Challenge 4
 
