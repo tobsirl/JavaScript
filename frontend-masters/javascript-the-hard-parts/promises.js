@@ -62,19 +62,26 @@ promise.then(() => console.log('Promise has been resolved!'));
  * return a setTimeout that calls resolve after 1000ms
  */
 
+// function delay() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => resolve('Hello'), 1000);
+//   });
+// }
+
 function delay() {
-  return new Promise(function (resolve, reject) {
-    resolve(
-      setTimeout(function (message) {
-        console.log(message);
-      }, 1000)
-    );
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve("5. Hello"), 1000);
   });
 }
 
 // Uncomment the code below to test
 // This code should log "Hello" after 1000ms
-delay().then(sayHello);
+
+function sayHello(data) {
+  console.log(data);
+}
+
+delay().then(sayHello); //?
 
 // Challenge 6
 //
