@@ -8,7 +8,7 @@ function sayHello() {
 }
 
 // Uncomment the line below when ready
-sayHello(); // should log "Hello" after 1000ms
+// sayHello(); // should log "Hello" after 1000ms
 
 /*
  *Challenge 2
@@ -24,7 +24,7 @@ var promise = new Promise(function (resolve, reject) {
 
 // Should print out "Resolved!"
 // ADD CODE HERE
-promise.then((data) => console.log(data));
+// promise.then((data) => console.log(data));
 
 // Challenge 3
 /*
@@ -39,7 +39,7 @@ promise = new Promise(function (resolve, reject) {
 
 // Should print out "Reject!"
 // ADD CODE HERE
-promise.catch((res) => console.log(res));
+// promise.catch((res) => console.log(res));
 
 // Challenge 4
 /*
@@ -54,7 +54,7 @@ promise = new Promise(function (resolve, reject) {
 
 // Uncomment the lines below when ready
 promise.then(() => console.log('Promise has been resolved!'));
-console.log("I'm not the promise!");
+// console.log("I'm not the promise!");
 
 // Challenge 5
 /*
@@ -74,7 +74,7 @@ function delay() {
 
 // Uncomment the code below to test
 // This code should log "Hello" after 1000ms
-// delay().then(sayHello);
+delay().then(sayHello);
 
 // Challenge 6
 //
