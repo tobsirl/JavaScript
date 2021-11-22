@@ -28,14 +28,19 @@ console.log(vicky.age); // -> Logs 24
                        USING OBJECT.CREATE
 ****************************************************************/
 
-/*** CHALLENGE 2 ***/
+/*** CHALLENGE 2
+ * Inside personStore object, create a property greet where the value is a function that logs "hello".
+ * ***/
 
 const personStore = {
   // add code here
+  greet: function () {
+    console.log('Hello');
+  },
 };
 
 // /********* Uncomment this line to test your work! *********/
-// personStore.greet(); // -> Logs 'hello'
+personStore.greet(); // -> Logs 'hello'
 
 /*** CHALLENGE 3 ***/
 
