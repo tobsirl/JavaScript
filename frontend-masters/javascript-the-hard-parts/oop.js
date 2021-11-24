@@ -42,10 +42,16 @@ const personStore = {
 // /********* Uncomment this line to test your work! *********/
 personStore.greet(); // -> Logs 'hello'
 
-/*** CHALLENGE 3 ***/
+/*** CHALLENGE 3
+ * Create a function personFromPersonStore that takes as input a name and an age. When called,
+ * the function will create person objects using the Object.create method on the personStore object.
+ *  ***/
 
 function personFromPersonStore(name, age) {
   // add code here
+  const person = Object.create(name, age);
+  person.name = name;
+  person.age = age
 }
 
 const sandra = personFromPersonStore('Sandra', 26);
