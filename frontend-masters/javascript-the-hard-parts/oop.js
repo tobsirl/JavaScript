@@ -70,8 +70,11 @@ sandra.greet(); //-> Logs 'hello'
  * ***/
 
 // add code here
+sandra.introduce = function () {
+  console.log(`Hi, my name is ${this.name}`);
+};
 
-// sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
+sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 
 /****************************************************************
                     USING THE 'NEW' KEYWORD
