@@ -65,7 +65,9 @@ console.log(sandra.name); // -> Logs 'Sandra'
 console.log(sandra.age); //-> Logs 26
 sandra.greet(); //-> Logs 'hello'
 
-/*** CHALLENGE 4 ***/
+/*** CHALLENGE 4
+ * Without editing the code you've already written, add an introduce method to the personStore object that logs "Hi, my name is [name]".
+ * ***/
 
 // add code here
 
