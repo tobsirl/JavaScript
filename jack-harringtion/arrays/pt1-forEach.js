@@ -1,3 +1,4 @@
+// Can't use a break in a forEach
 const numbers = [10, 20, 30, 40, 50];
 
 numbers.forEach((value, index) => {
