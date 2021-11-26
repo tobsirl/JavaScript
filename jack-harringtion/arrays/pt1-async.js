@@ -10,7 +10,8 @@ function getById(id) {
 const ids = [10, 20, 30];
 
 (async function () {
-  for (const id of ids) {
-    await getById(id);
-  }
+  // for (const id of ids) {
+  //   await getById(id);
+  // }
+  ids.forEach(async (id) => await getById(id));
 })();
