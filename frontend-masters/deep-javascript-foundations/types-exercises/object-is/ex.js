@@ -5,7 +5,9 @@ if (!Object.is || true) {
     const yNegZero; 
 
     // ***************************************************
-    
+    function isItNegZero(v) {
+      return v === 0 && (1/v) === -Infinity
+    }
   };
 }
 
