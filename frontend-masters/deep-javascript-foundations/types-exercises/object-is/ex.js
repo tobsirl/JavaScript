@@ -1,8 +1,11 @@
 // TODO: define polyfill for `Object.is(..)`
-const Object = {};
-if (!Object.is === true) {
-  Object.is = function (param1, param2) {
-    return param1 === param2;
+if (!Object.is || true) {
+  Object.is = function ObjectIs(x, y) {
+    const xNegZero;
+    const yNegZero; 
+
+    // ***************************************************
+    
   };
 }
 
