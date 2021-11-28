@@ -29,3 +29,6 @@ const fullNames = people.map((person) => {
   };
 });
 fullNames;
+fullNames[0].first = 'Penny';
+fullNames[0].address.city = 'San Jose';
+people
