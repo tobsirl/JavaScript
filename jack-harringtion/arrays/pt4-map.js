@@ -16,3 +16,16 @@ const positiveBy10 = numbersWithNegatives
   .filter((num) => num > 0)
   .map((num) => num * 10);
 positiveBy10;
+
+const people = [
+  { first: 'Jane', last: 'Smith', address: { city: 'Oakland' } },
+  { first: 'Sally', last: 'Joe', address: { city: 'Foster City' } },
+];
+
+const fullNames = people.map((person) => {
+  return {
+    ...person,
+    fullName: `${person.first} ${person.last}`,
+  };
+});
+fullNames;
