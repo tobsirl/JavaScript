@@ -12,3 +12,7 @@ const numbersTimes10Obj = numbers.map((num) => {
 numbersTimes10Obj;
 
 const numbersWithNegatives = [-10, 20, 30, -40, -50];
+const positiveBy10 = numbersWithNegatives
+  .filter((num) => num > 0)
+  .map((num) => num * 10);
+positiveBy10;
