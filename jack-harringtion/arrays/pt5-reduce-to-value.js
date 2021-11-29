@@ -4,5 +4,10 @@ let sum = 0;
 for (const value of numbers) {
   sum += value;
 }
-
 sum;
+
+// reduce
+numbers.reduce((sum, value) => {
+  sum += value;
+  return sum;
+}, 0);
