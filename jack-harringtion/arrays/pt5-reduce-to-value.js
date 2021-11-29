@@ -11,3 +11,5 @@ numbers.reduce((sum, value) => {
   sum += value;
   return sum;
 }, 0);
+
+numbers.reduce((sum, value) => sum + value, 0);
