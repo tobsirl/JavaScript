@@ -13,3 +13,5 @@ numbers.reduce((sum, value) => {
 }, 0);
 
 numbers.reduce((sum, value) => sum + value, 0);
+
+numbers.reduce((avg, value, _, arr) => avg + value / arr.length, 0);
