@@ -19,3 +19,5 @@ numbers.reduce((avg, value, _, arr) => avg + value / arr.length, 0);
 const names = ['LG', 'Mimi', 'Sadie', 'Ripley'];
 
 names.reduce((str, name, index) => str + (index > 0 ? ', ' : '') + name, '');
+
+names.join(', ');
