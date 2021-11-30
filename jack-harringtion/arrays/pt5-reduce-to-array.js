@@ -21,4 +21,10 @@ groups.reduce((arr, [count, value]) => {
     arr.push(value);
   }
   return arr;
-}, []); 
+}, []);
+
+Array(3).fill('!');
+groups.reduce(
+  (arr, [count, value]) => [...arr, ...Array(count).fill(value)],
+  []
+); //? 
