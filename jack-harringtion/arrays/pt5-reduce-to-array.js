@@ -5,3 +5,5 @@ for (const number of numbers) {
   arr = [...arr, number];
 }
 arr;
+
+numbers.reduce((arr, number) => [...arr, number], []); 
