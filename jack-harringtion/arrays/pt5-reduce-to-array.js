@@ -6,4 +6,6 @@ for (const number of numbers) {
 }
 arr;
 
-numbers.reduce((arr, number) => [...arr, number], []); 
+numbers.reduce((arr, number) => [...arr, number], []);
+
+numbers.reduceRight((arr, number) => [...arr, number], []);
