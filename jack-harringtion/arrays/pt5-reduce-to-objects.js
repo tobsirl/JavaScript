@@ -5,4 +5,12 @@ for (const number of numbers) {
   lookup[number] = (lookup[number] ?? 0) + 1;
 }
 
-lookup 
+lookup;
+
+numbers.reduce(
+  (lookup, value) => ({
+    ...lookup,
+    [value]: (lookup[value] ?? 0) + 1,
+  }),
+  {}
+);
