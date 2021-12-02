@@ -12,3 +12,6 @@ numbers.reduce(
   (arr, value, index) => (index > 0 && index < 4 ? [...arr, value] : arr),
   []
 );
+
+// map
+numbers.reduce((arr, value) => [...arr, value * 100], []);
