@@ -1,10 +1,17 @@
 // TODO: write the validation functions
 
 function isValidName(name) {
-  if (String(name) && name.length !== 0 && name.length > 2) {
-    return true;
+  if(typeof name == "string" &&
+    name.trim().length >= 3
+  ) {
+    return true
   }
-  return false;
+  return false
+}
+
+function hoursAttended(attended, length) {
+  if(typeof attended === 'string' )
+  
 }
 
 // tests:
