@@ -1,6 +1,11 @@
 // TODO: write `findAll(..)`
 function findAll(match, array) {
   let ret = [];
+  for (const v of array) {
+    if (Object.is(match, v)) {
+      ret.push(v);
+    }
+  }
 
   return ret;
 }
