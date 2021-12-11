@@ -5,6 +5,10 @@ function findAll(match, array) {
     if (Object.is(match, v)) {
       ret.push(v);
     }
+		
+    if (match == null && v == null) {
+      ret.push(v);
+    }
   }
 
   return ret;
