@@ -4,10 +4,12 @@ function findAll(match, array) {
   for (const v of array) {
     if (Object.is(match, v)) {
       ret.push(v);
-    }
-		
-    if (match == null && v == null) {
+    } else if (match == null && v == null) {
       ret.push(v);
+    } else if (typeof match == 'boolean' && typeof v == 'boolean') {
+      if (match == v) {
+        ret.push(v);
+      }
     }
   }
 
