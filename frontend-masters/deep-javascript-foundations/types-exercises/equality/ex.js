@@ -1,4 +1,9 @@
 // TODO: write `findAll(..)`
+function findAll(match, array) {
+  let ret = [];
+
+  return ret;
+}
 
 // tests:
 var myObj = { a: 2 };
