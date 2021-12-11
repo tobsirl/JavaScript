@@ -19,7 +19,19 @@ function findAll(match, array) {
       if (match == v) {
         ret.push(v);
       }
-    } else if
+    } else if (
+      typeof match == 'number' &&
+      !Object.is(match, -0) &&
+      !Object.is(match, NaN) &&
+      !Object.is(match, Infinity) &&
+      !Object.is(match, -Infinity) &&
+      typeof v == 'string' &&
+      v.trim() != ''
+    ) {
+      if (match == v) {
+        ret.push(v);
+      }
+    }
   }
 
   return ret;
