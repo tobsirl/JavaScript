@@ -10,7 +10,16 @@ function findAll(match, array) {
       if (match == v) {
         ret.push(v);
       }
-    }
+    } else if (
+      typeof match == 'string' &&
+      match.trim() != '' &&
+      typeof v == 'number' &&
+      !Object.is(v, -0)
+    ) {
+      if (match == v) {
+        ret.push(v);
+      }
+    } else if
   }
 
   return ret;
