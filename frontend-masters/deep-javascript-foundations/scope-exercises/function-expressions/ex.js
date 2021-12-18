@@ -1,5 +1,6 @@
 function printRecords(recordIds) {
   // TODO
+	return recordIds.
 }
 
 function paidStudentsToEnroll() {
