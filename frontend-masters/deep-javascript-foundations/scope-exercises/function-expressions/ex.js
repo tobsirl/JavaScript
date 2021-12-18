@@ -25,7 +25,15 @@ function printRecords(recordIds) {
 }
 
 function paidStudentsToEnroll() {
-  // TODO
+  const idsToEnroll = studentRecords
+    .filter(function needsToEnroll(record) {
+      return record.paid && !currentEnrollment.includes(record.id);
+    })
+    .map(function getStudentId(record) {
+      return record.id;
+    });
+
+  return [...currentEnrollment, ...idsToEnroll];
 }
 
 function remindUnpaid(recordIds) {
