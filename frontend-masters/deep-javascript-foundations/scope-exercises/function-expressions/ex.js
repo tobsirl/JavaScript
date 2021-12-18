@@ -1,6 +1,11 @@
+function getStudentById(studentId) {
+  return studentRecords.find(function matchId(record) {
+    return record.id === studentId;
+  });
+}
+
 function printRecords(recordIds) {
   // TODO
-	return recordIds.
 }
 
 function paidStudentsToEnroll() {
