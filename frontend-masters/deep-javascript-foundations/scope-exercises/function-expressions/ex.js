@@ -7,6 +7,18 @@ function getStudentById(studentId) {
   });
 }
 
+const printRecords = (recordIds) =>
+  recordIds
+    .map(getStudentFromId)
+    .sort((record1, record2) =>
+      record1.name < record2.name ? -1 : record1.name > record2.name ? 1 : 0
+    )
+    .forEach((record) =>
+      console.log(
+        `${record.name} (${record.id}): ${record.paid ? 'Paid' : 'Not Paid'}`
+      )
+    );
+
 function printRecords(recordIds) {
   const records = recordIds.map(getStudentById);
 
