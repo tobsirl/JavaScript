@@ -39,6 +39,13 @@ function printRecords(recordIds) {
   });
 }
 
+const paidStudentsToEnroll = () => [
+  ...currentEnrollment,
+  ...studentRecords
+    .filter((record) => record.paid && !currentEnrollment.includes(record.id))
+    .map((record) => record.id),
+];
+
 function paidStudentsToEnroll() {
   const idsToEnroll = studentRecords
     .filter(function needsToEnroll(record) {
