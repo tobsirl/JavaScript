@@ -1,3 +1,6 @@
+const getStudentFromId = (studentId) =>
+  studentRecords.find((record) => record.id == studentId);
+
 function getStudentById(studentId) {
   return studentRecords.find(function matchId(record) {
     return record.id === studentId;
