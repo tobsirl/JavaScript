@@ -37,7 +37,12 @@ function paidStudentsToEnroll() {
 }
 
 function remindUnpaid(recordIds) {
-  // TODO
+  const unpaidIds = recordIds.filter(function notYetPaid(studentId) {
+    const record = getStudentFromId(studentId);
+    return !record.paid;
+  });
+
+  printRecords(unpaidIds);
 }
 
 // ********************************
