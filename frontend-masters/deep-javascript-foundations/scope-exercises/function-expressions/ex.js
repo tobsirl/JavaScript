@@ -58,6 +58,11 @@ function paidStudentsToEnroll() {
   return [...currentEnrollment, ...idsToEnroll];
 }
 
+const remindUnpaid = (recordIds) =>
+  printRecords(
+    recordIds.filter((studentId) => !getStudentFromId(studentId).paid)
+  );
+
 function remindUnpaid(recordIds) {
   const unpaidIds = recordIds.filter(function notYetPaid(studentId) {
     const record = getStudentFromId(studentId);
