@@ -43,12 +43,14 @@ function getStudentId(record) {
 }
 
 function remindUnpaid(recordIds) {
-  var unpaidIds = recordIds.filter(function notYetPaid(studentId) {
-    var record = getStudentFromId(studentId);
-    return !record.paid;
-  });
+  var unpaidIds = recordIds.filter(notYetPaid);
 
   printRecords(unpaidIds);
+}
+
+function notYetPaid(studentId) {
+  var record = getStudentFromId(studentId);
+  return !record.paid;
 }
 
 // ********************************
