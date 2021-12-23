@@ -27,15 +27,17 @@ function printRecord(record) {
 }
 
 function paidStudentsToEnroll() {
-  var recordsToEnroll = studentRecords.filter(function needToEnroll(record) {
-    return record.paid && !currentEnrollment.includes(record.id);
-  });
+  var recordsToEnroll = studentRecords.filter();
 
   var idsToEnroll = recordsToEnroll.map(function getStudentId(record) {
     return record.id;
   });
 
   return [...currentEnrollment, ...idsToEnroll];
+}
+
+function needToEnroll(record) {
+  return record.paid && !currentEnrollment.includes(record.id);
 }
 
 function remindUnpaid(recordIds) {
