@@ -9,17 +9,19 @@ function getStudentFromId(studentId) {
 function printRecords(recordIds) {
   var records = recordIds.map(getStudentFromId);
 
-  records.sort(function sortByNameAsc(record1, record2) {
-    if (record1.name < record2.name) return -1;
-    else if (record1.name > record2.name) return 1;
-    else return 0;
-  });
+  records.sort(sortByNameAsc);
 
   records.forEach(function printRecord(record) {
     console.log(
       `${record.name} (${record.id}): ${record.paid ? 'Paid' : 'Not Paid'}`
     );
   });
+}
+
+function sortByNameAsc(record1, record2) {
+  if (record1.name < record2.name) return -1;
+  else if (record1.name > record2.name) return 1;
+  else return 0;
 }
 
 function paidStudentsToEnroll() {
