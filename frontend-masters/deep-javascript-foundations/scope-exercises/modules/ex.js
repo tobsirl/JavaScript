@@ -40,8 +40,11 @@ remindUnpaid(currentEnrollment);
 // ********************************
 
 function defineWorkshop() {
-  let publicApi = {};
-  return publicApi;
+  let currentEnrollment = [];
+  let studentRecords = [];
+
+  let publicAPI = {};
+  return publicAPI;
 
   function getStudentFromId(studentId) {
     return studentRecords.find(matchId);
