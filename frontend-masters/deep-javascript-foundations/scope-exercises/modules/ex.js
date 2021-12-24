@@ -43,8 +43,15 @@ function defineWorkshop() {
   let currentEnrollment = [];
   let studentRecords = [];
 
-  let publicAPI = {};
+  let publicAPI = {
+    addStudent,
+    enrollStudent,
+  };
   return publicAPI;
+
+  function addStudent(id, name, paid) {
+    studentRecords.push({ id, name, paid });
+  }
 
   function getStudentFromId(studentId) {
     return studentRecords.find(matchId);
