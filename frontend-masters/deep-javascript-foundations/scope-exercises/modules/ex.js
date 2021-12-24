@@ -46,7 +46,9 @@ function defineWorkshop() {
   let publicAPI = {
     addStudent,
     enrollStudent,
+    printCurrentEnrollment,
     enrollPaidStudents,
+    remindUnpaidStudents,
   };
   return publicAPI;
 
@@ -62,6 +64,10 @@ function defineWorkshop() {
 
   function enrollPaidStudents() {
     currentEnrollment = paidStudentsToEnroll();
+  }
+
+  function remindUnpaidStudents() {
+    remindUnpaid(currentEnrollment);
   }
 
   function printCurrentEnrollment() {
