@@ -53,6 +53,12 @@ function defineWorkshop() {
     studentRecords.push({ id, name, paid });
   }
 
+  function enrollStudent(id) {
+    if (!currentEnrollment.includes(id)) {
+      currentEnrollment.push(id);
+    }
+  }
+
   function getStudentFromId(studentId) {
     return studentRecords.find(matchId);
 
