@@ -46,6 +46,7 @@ function defineWorkshop() {
   let publicAPI = {
     addStudent,
     enrollStudent,
+    enrollPaidStudents,
   };
   return publicAPI;
 
@@ -57,6 +58,10 @@ function defineWorkshop() {
     if (!currentEnrollment.includes(id)) {
       currentEnrollment.push(id);
     }
+  }
+
+  function enrollPaidStudents() {
+    currentEnrollment = paidStudentsToEnroll();
   }
 
   function printCurrentEnrollment() {
