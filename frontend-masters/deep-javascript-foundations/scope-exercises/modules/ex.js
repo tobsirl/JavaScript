@@ -59,6 +59,10 @@ function defineWorkshop() {
     }
   }
 
+  function printCurrentEnrollment() {
+    printRecords(currentEnrollment);
+  }
+
   function getStudentFromId(studentId) {
     return studentRecords.find(matchId);
 
