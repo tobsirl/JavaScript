@@ -13,16 +13,16 @@ var deepJS = {
   },
 
   printCurrentEnrollment() {
-    this.printRecords(currentEnrollment);
+    this.printRecords(this.currentEnrollment);
   },
 
   enrollPaidStudents() {
-    this.currentEnrollment = paidStudentsToEnroll();
+    this.currentEnrollment = this.paidStudentsToEnroll();
     this.printCurrentEnrollment();
   },
 
   remindUnpaidStudents() {
-    this.remindUnpaid(currentEnrollment);
+    this.remindUnpaid(this.currentEnrollment);
   },
 
   getStudentFromId(studentId) {
