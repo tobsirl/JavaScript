@@ -1,3 +1,5 @@
+let deepJS = defineWorkshop();
+
 var currentEnrollment = [410, 105, 664, 375];
 
 var studentRecords = [
