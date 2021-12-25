@@ -36,11 +36,11 @@ var deepJS = {
   },
 
   printRecords(recordIds) {
-    var records = recordIds.map(this.getStudentFromId);
+    var records = recordIds.map(this.getStudentFromId.bind(this));
 
-    records.sort(this.sortByNameAsc);
+    records.sort(this.sortByNameAsc.bind(this));
 
-    records.forEach(this.printRecord);
+    records.forEach(this.printRecord.bind(this));
   },
 
   sortByNameAsc(record1, record2) {
@@ -56,9 +56,9 @@ var deepJS = {
   },
 
   paidStudentsToEnroll() {
-    var recordsToEnroll = this.studentRecords.filter(this.needToEnroll);
+    var recordsToEnroll = this.studentRecords.filter(this.needToEnroll.bind(this));
 
-    var idsToEnroll = recordsToEnroll.map(this.getStudentId);
+    var idsToEnroll = recordsToEnroll.map(this.getStudentId.bind(this));
 
     return [...this.currentEnrollment, ...idsToEnroll];
   },
@@ -72,7 +72,7 @@ var deepJS = {
   },
 
   remindUnpaid(recordIds) {
-    var unpaidIds = recordIds.filter(this.notYetPaid);
+    var unpaidIds = recordIds.filter(this.notYetPaid.bind(this));
 
     this.printRecords(unpaidIds);
   },
