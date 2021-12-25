@@ -1,28 +1,28 @@
 var deepJS = {
-	function addStudent(id, name, paid) {
+  addStudent(id, name, paid) {
     studentRecords.push({ id, name, paid });
-  }
+  },
 
-  function enrollStudent(id) {
+  enrollStudent(id) {
     if (!currentEnrollment.includes(id)) {
       currentEnrollment.push(id);
     }
-  }
+  },
 
-  function printCurrentEnrollment() {
+  printCurrentEnrollment() {
     printRecords(currentEnrollment);
-  }
+  },
 
-  function enrollPaidStudents() {
+  enrollPaidStudents() {
     currentEnrollment = paidStudentsToEnroll();
     printCurrentEnrollment();
-  }
+  },
 
-  function remindUnpaidStudents() {
+  remindUnpaidStudents() {
     remindUnpaid(currentEnrollment);
-  }
+  },
 
-  function getStudentFromId(studentId) {
+  getStudentFromId(studentId) {
     return studentRecords.find(matchId);
 
     // *************************
@@ -30,54 +30,54 @@ var deepJS = {
     function matchId(record) {
       return record.id == studentId;
     }
-  }
+  },
 
-  function printRecords(recordIds) {
+  printRecords(recordIds) {
     var records = recordIds.map(getStudentFromId);
 
     records.sort(sortByNameAsc);
 
     records.forEach(printRecord);
-  }
+  },
 
-  function sortByNameAsc(record1, record2) {
+  sortByNameAsc(record1, record2) {
     if (record1.name < record2.name) return -1;
     else if (record1.name > record2.name) return 1;
     else return 0;
-  }
+  },
 
-  function printRecord(record) {
+  printRecord(record) {
     console.log(
       `${record.name} (${record.id}): ${record.paid ? 'Paid' : 'Not Paid'}`
     );
-  }
+  },
 
-  function paidStudentsToEnroll() {
+  paidStudentsToEnroll() {
     var recordsToEnroll = studentRecords.filter(needToEnroll);
 
     var idsToEnroll = recordsToEnroll.map(getStudentId);
 
     return [...currentEnrollment, ...idsToEnroll];
-  }
+  },
 
-  function needToEnroll(record) {
+  needToEnroll(record) {
     return record.paid && !currentEnrollment.includes(record.id);
-  }
+  },
 
-  function getStudentId(record) {
+  getStudentId(record) {
     return record.id;
-  }
+  },
 
-  function remindUnpaid(recordIds) {
+  remindUnpaid(recordIds) {
     var unpaidIds = recordIds.filter(notYetPaid);
 
     printRecords(unpaidIds);
-  }
+  },
 
-  function notYetPaid(studentId) {
+  notYetPaid(studentId) {
     var record = getStudentFromId(studentId);
     return !record.paid;
-  }
+  },
 };
 
 deepJS.addStudent(311, 'Frank', /*paid=*/ true);
