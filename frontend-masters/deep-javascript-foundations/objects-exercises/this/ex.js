@@ -1,4 +1,7 @@
 var deepJS = {
+  currentEnrollment: [],
+  studentRecords: [],
+
   addStudent(id, name, paid) {
     studentRecords.push({ id, name, paid });
   },
@@ -122,9 +125,6 @@ deepJS.remindUnpaidStudents();
 // ********************************
 
 function defineWorkshop() {
-  var currentEnrollment = [];
-  var studentRecords = [];
-
   var publicAPI = {
     addStudent,
     enrollStudent,
