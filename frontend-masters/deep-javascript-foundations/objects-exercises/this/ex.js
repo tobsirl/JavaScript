@@ -56,7 +56,9 @@ var deepJS = {
   },
 
   paidStudentsToEnroll() {
-    var recordsToEnroll = this.studentRecords.filter(this.needToEnroll.bind(this));
+    var recordsToEnroll = this.studentRecords.filter(
+      this.needToEnroll.bind(this)
+    );
 
     var idsToEnroll = recordsToEnroll.map(this.getStudentId.bind(this));
 
@@ -124,15 +126,4 @@ deepJS.remindUnpaidStudents();
 
 // ********************************
 
-function defineWorkshop() {
-  var publicAPI = {
-    addStudent,
-    enrollStudent,
-    printCurrentEnrollment,
-    enrollPaidStudents,
-    remindUnpaidStudents,
-  };
-  return publicAPI;
-
-  // ********************************
-}
+// ********************************
