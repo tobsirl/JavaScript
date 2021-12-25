@@ -3,30 +3,30 @@ var deepJS = {
   studentRecords: [],
 
   addStudent(id, name, paid) {
-    studentRecords.push({ id, name, paid });
+    this.studentRecords.push({ id, name, paid });
   },
 
   enrollStudent(id) {
-    if (!currentEnrollment.includes(id)) {
-      currentEnrollment.push(id);
+    if (!this.currentEnrollment.includes(id)) {
+      this.currentEnrollment.push(id);
     }
   },
 
   printCurrentEnrollment() {
-    printRecords(currentEnrollment);
+    this.printRecords(currentEnrollment);
   },
 
   enrollPaidStudents() {
-    currentEnrollment = paidStudentsToEnroll();
-    printCurrentEnrollment();
+    this.currentEnrollment = paidStudentsToEnroll();
+    this.printCurrentEnrollment();
   },
 
   remindUnpaidStudents() {
-    remindUnpaid(currentEnrollment);
+    this.remindUnpaid(currentEnrollment);
   },
 
   getStudentFromId(studentId) {
-    return studentRecords.find(matchId);
+    return this.studentRecords.find(matchId);
 
     // *************************
 
@@ -36,11 +36,11 @@ var deepJS = {
   },
 
   printRecords(recordIds) {
-    var records = recordIds.map(getStudentFromId);
+    var records = recordIds.map(this.getStudentFromId);
 
-    records.sort(sortByNameAsc);
+    records.sort(this.sortByNameAsc);
 
-    records.forEach(printRecord);
+    records.forEach(this.printRecord);
   },
 
   sortByNameAsc(record1, record2) {
@@ -56,15 +56,15 @@ var deepJS = {
   },
 
   paidStudentsToEnroll() {
-    var recordsToEnroll = studentRecords.filter(needToEnroll);
+    var recordsToEnroll = this.studentRecords.filter(this.needToEnroll);
 
-    var idsToEnroll = recordsToEnroll.map(getStudentId);
+    var idsToEnroll = recordsToEnroll.map(this.getStudentId);
 
-    return [...currentEnrollment, ...idsToEnroll];
+    return [...this.currentEnrollment, ...idsToEnroll];
   },
 
   needToEnroll(record) {
-    return record.paid && !currentEnrollment.includes(record.id);
+    return record.paid && !this.currentEnrollment.includes(record.id);
   },
 
   getStudentId(record) {
@@ -72,13 +72,13 @@ var deepJS = {
   },
 
   remindUnpaid(recordIds) {
-    var unpaidIds = recordIds.filter(notYetPaid);
+    var unpaidIds = recordIds.filter(this.notYetPaid);
 
-    printRecords(unpaidIds);
+    this.printRecords(unpaidIds);
   },
 
   notYetPaid(studentId) {
-    var record = getStudentFromId(studentId);
+    var record = this.getStudentFromId(studentId);
     return !record.paid;
   },
 };
