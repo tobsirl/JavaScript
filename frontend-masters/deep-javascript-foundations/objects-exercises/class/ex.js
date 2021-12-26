@@ -80,6 +80,9 @@ class WorkShop extends Helpers {
 }
 
 // ********************************
+// instantiate
+
+const deepJS = new WorkShop();
 
 deepJS.addStudent(311, 'Frank', /*paid=*/ true);
 deepJS.addStudent(410, 'Suzy', /*paid=*/ true);
