@@ -1,5 +1,19 @@
+class Helpers {
+  sortByNameAsc(record1, record2) {
+    if (record1.name < record2.name) return -1;
+    else if (record1.name > record2.name) return 1;
+    else return 0;
+  }
+  printRecord(record) {
+    console.log(
+      `${record.name} (${record.id}): ${record.paid ? 'Paid' : 'Not Paid'}`
+    );
+  }
+}
+
 class WorkShop {
   constructor() {
+    super();
     this.currentEnrollment = [];
     this.studentRecords = [];
   }
@@ -38,16 +52,7 @@ class WorkShop {
 
     records.forEach(this.printRecord);
   }
-  sortByNameAsc(record1, record2) {
-    if (record1.name < record2.name) return -1;
-    else if (record1.name > record2.name) return 1;
-    else return 0;
-  }
-  printRecord(record) {
-    console.log(
-      `${record.name} (${record.id}): ${record.paid ? 'Paid' : 'Not Paid'}`
-    );
-  }
+
   paidStudentsToEnroll() {
     var recordsToEnroll = this.studentRecords.filter(
       this.needToEnroll.bind(this)
