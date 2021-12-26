@@ -11,7 +11,7 @@ class Helpers {
   }
 }
 
-class WorkShop {
+class WorkShop extends Helpers {
   constructor() {
     super();
     this.currentEnrollment = [];
