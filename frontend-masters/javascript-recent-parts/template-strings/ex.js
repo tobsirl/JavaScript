@@ -1,10 +1,10 @@
 function upper(strings, ...values) {}
 
-var name = 'kyle',
-  twitter = 'getify',
-  topic = 'JS Recent Parts';
+const name = 'kyle',
+const twitter = 'getify',
+const topic = 'JS Recent Parts';
 
 console.log(
-  `Hello ____ (@____), welcome to ____!` ===
+  upper`Hello ${name} (@${twitter}), welcome to ${topic}!` ===
     'Hello KYLE (@GETIFY), welcome to JS RECENT PARTS!'
 );
