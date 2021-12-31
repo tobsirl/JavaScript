@@ -15,11 +15,13 @@ function handleResponse({
   topic = 'JavaScript',
   format = 'Live',
   slides: { start = 0, end = 100 },
+  ...otherProps
 } = {}) {
   TestCase({
     topic,
     format,
     slides: { start, end },
+    ...otherProps,
   });
 }
 
