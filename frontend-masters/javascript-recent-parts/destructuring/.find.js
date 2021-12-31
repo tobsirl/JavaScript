@@ -8,3 +8,6 @@ arr.find(function match(v) {
   return v && v.a > 10;
 });
 
+arr.findIndex(function match(v) {
+  return v && v.a > 10;
+});
