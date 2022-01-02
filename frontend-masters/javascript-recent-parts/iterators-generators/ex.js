@@ -1,6 +1,6 @@
 var numbers = {
-  *[Symbol.iterator]() {
-    for (let i = 0; i <= 100; i++) {
+  *[Symbol.iterator]({ start = 0, end = 100, step = 1 } = {}) {
+    for (let i = start; i <= end; i += step) {
       yield i;
     }
   },
