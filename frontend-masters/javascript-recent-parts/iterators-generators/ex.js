@@ -12,7 +12,15 @@ for (let num of numbers) {
 }
 
 // should print 6..30 by 4s
-console.log('My lucky numbers are: ____');
+console.log(
+  `My lucky numbers are: ${[
+    ...numbers[Symbol.iterator]({
+      start: 6,
+      end: 30,
+      step: 4,
+    }),
+  ]}`
+);
 
 // Hint:
 //     [...numbers[Symbol.iterator]( ?? )]
