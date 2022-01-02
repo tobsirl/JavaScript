@@ -1,5 +1,9 @@
 var numbers = {
-  // ..
+  *[Symbol.iterator]() {
+    for (let i = 0; i <= 100; i++) {
+      yield i;
+    }
+  },
 };
 
 // should print 0..100 by 1s
