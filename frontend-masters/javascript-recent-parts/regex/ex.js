@@ -11,7 +11,7 @@ but the power of a smile
 especially yours can heal a frozen heart`;
 
 for (let power of powers(poem)) {
-	console.log(power);
+  console.log(power);
 }
 // a gun: kill
 // fire: burn
@@ -19,7 +19,6 @@ for (let power of powers(poem)) {
 // a mind: learn
 // anger: rage
 // smile: heal
-
 
 // Hints:
 //
