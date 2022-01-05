@@ -6,9 +6,11 @@ function getFile(file) {
 
 async function loadFiles(files) {
   // request all files concurrently
-  const text1 = await getFile(files[0]);
-  const text2 = await getFile(files[1]);
-  const text3 = await getFile(files[2]);
+  const prs = files.map(getFile);
+
+  for (let pr of prs) {
+    console.log(await pr);
+  }
   // print in order, sequentially
 }
 
