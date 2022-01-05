@@ -6,6 +6,9 @@ function getFile(file) {
 
 async function loadFiles(files) {
   // request all files concurrently
+  getFile(files[0]);
+  getFile(files[1]);
+  getFile(files[2]);
   // print in order, sequentially
 }
 
