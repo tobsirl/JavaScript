@@ -16,7 +16,7 @@ sayHello(); // should log "Hello" after 1000ms
 Challenge 2
 Create a promise. Have it resolve with a value of 'Resolved!' in resolve after a delay of 1000ms, using setTimeout. Print the contents of the promise after it has been resolved by passing console.log to .then
 */
-const promise = new Promise((resolve, reject) => {
+let promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve('Resolved!');
   }, 1000);
@@ -30,9 +30,9 @@ Challenge 3
 Create another promise. Now have it reject with a value of "Rejected!" without using setTimeout. Print the contents of the promise after it has been rejected by passing console.log to .catch
 */
 
-promise = new Promise(function(resolve, reject) {
-  // ADD CODE HERE
-})
+promise = new Promise(function (resolve, reject) {
+  reject('Rejected!');
+});
 
 // Should print out "Reject!"
-// ADD CODE HERE
+promise.catch((data) => console.log(data));
