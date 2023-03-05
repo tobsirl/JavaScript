@@ -26,3 +26,10 @@ class Counter {
     return --this.counter;
   }
 }
+
+// 2. Setting a variable equal to the the frozen newly instantiated object, by using the built-in `Object.freeze` method.
+// This ensures that the newly created instance is not modifiable.
+const singletonCounter = Object.freeze(new Counter());
+
+// 3. Exporting the variable as the `default` value within the file to make it globally accessible.
+export default singletonCounter;
