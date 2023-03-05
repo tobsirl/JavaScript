@@ -20,4 +20,4 @@ class DBConnection {
 
 const singletonConnection = Object.freeze(new DBConnection('mongodb://...'));
 
-const connection = new DBConnection('mongodb://...');
+singletonConnection.connect();
