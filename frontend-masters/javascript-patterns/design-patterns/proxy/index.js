@@ -9,8 +9,13 @@ const user = {
 };
 
 const userProxy = new Proxy(user, {
-  get: (obj, prop) => {
-    return `${new Date()} | The value of ${prop} is ${Reflect.get(obj, prop)}`;
+  get: (target, property) => {
+    console.log(
+      `${new Date()} | The value of ${property} is ${Reflect.get(
+        target,
+        property
+      )}`
+    );
   },
   set: (target, prop, value) => {
     if (prop === 'email') {
@@ -40,4 +45,5 @@ const userProxy = new Proxy(user, {
 });
 
 // userProxy.email = 'test@test.com';
-userProxy.get(user);
+userProxy.age;
+userProxy.firstName;
