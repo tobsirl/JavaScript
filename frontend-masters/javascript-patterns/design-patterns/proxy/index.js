@@ -47,3 +47,5 @@ const userProxy = new Proxy(user, {
 // userProxy.email = 'test@test.com';
 userProxy.age;
 userProxy.firstName;
+userProxy.firstName = 'Sammy';
+userProxy.firstName;
