@@ -9,6 +9,7 @@ const pinkBtn = document.getElementById('pink-btn');
 const blueBtn = document.getElementById('blue-btn');
 
 pinkBtn.addEventListener('click', () => {
+  console.log('object :>>');
   const data = '🎀 Click on pink button! 🎀';
   sendToGoogleAnalytics(data);
   sendToCustomAnalytics(data);
