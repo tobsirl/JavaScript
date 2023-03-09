@@ -1,3 +1,12 @@
+// factory function to create books
+export function createBook(title, author, isbn) {
+  return {
+    title,
+    author,
+    isbn,
+  };
+}
+
 export const book1 = {
   title: 'Harry Potter',
   author: 'JK Rowling',
