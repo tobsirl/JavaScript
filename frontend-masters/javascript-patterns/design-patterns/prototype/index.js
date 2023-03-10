@@ -33,4 +33,4 @@ const user2 = new User({
 
 console.log(user1, user2);
 
-// console.log(user.delete === user2.delete);
+console.log(user1.delete === user2.delete);
