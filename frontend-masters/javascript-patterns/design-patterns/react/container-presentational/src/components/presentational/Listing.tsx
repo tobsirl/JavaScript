@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Listing = ({ listing }) => (
+export const Listing = ({ listing }: any) => (
   <div
     className="card"
     style={{

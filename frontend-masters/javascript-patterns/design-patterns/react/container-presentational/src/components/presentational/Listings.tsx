@@ -15,7 +15,7 @@ export default function Listings() {
 
   return (
     <ListingsGrid>
-      {data.listings.map((listing) => (
+      {data.listings.map((listing: { id: any; }) => (
         <Listing key={listing.id} listing={listing} />
       ))}
     </ListingsGrid>

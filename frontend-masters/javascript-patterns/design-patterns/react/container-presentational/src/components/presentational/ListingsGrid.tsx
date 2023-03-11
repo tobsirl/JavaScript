@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ListingsGrid = ({ children }) => {
+export const ListingsGrid = ({ children }: any) => {
   return (
     <div
       style={{
