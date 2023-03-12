@@ -9,7 +9,7 @@ export function Listings(props) {
   return (
     <ListingsGrid>
       {props.data.listings.map((listing) => (
-        <Listing listing={listing} />
+        <Listing listing={listing} key={listing.id} />
       ))}
     </ListingsGrid>
   );
