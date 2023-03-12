@@ -4,7 +4,6 @@ import { Listing } from './Listing';
 import { ListingsGrid } from './ListingsGrid';
 
 export function Listings(props) {
-  console.log({ props });
   if (!props.data.listings.length) return null;
 
   return (
