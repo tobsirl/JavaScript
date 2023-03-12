@@ -1,25 +1,22 @@
 import React from 'react';
+import withLoader from '../hoc/withLoader';
 import { Listing } from './Listing';
 import { ListingsGrid } from './ListingsGrid';
 
-export function Listings() {
-  const [listings, setListings] = React.useState([]);
-
-  React.useEffect(() => {
-    fetch('https://house-lydiahallie.vercel.app/api/listings')
-      .then((res) => res.json())
-      .then((res) => setListings(res.listings));
-  }, []);
-
-  if (!listings.length) return null;
+export function Listings(props) {
+  console.log({ props });
+  if (!props.data.listings.length) return null;
 
   return (
     <ListingsGrid>
-      {listings.map((listing) => (
+      {props.data.listings.map((listing) => (
         <Listing listing={listing} />
       ))}
     </ListingsGrid>
   );
 }
 
-export default Listings;
+export default withLoader(
+  Listings,
+  'https://house-lydiahallie.vercel.app/api/listings'
+);

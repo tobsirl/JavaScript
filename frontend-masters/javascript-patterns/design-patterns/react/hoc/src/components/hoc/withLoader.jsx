@@ -1,5 +1,6 @@
 import React from 'react';
-import { LoadingSpinner } from '../components/LoadingSpinner';
+import { LoadingSpinner } from '../LoadingSpinner';
+
 
 export default function withLoader(Element, url) {
   return (props) => {
