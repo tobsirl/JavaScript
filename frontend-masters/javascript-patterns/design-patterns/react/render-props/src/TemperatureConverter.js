@@ -27,8 +27,8 @@ export default function TemperatureConverter(props) {
         placeholder="Degrees Celcius"
         onChange={(e) => setValue(parseInt(e.target.value))}
       />
-      <Kelvin value={Math.floor(value + 273.15)} />
-      <Fahrenheit value={Math.floor((value * 9) / 5 + 32)} />
+      {props.renderKelvin({ value: Math.floor(value + 273.15) })}
+      {props.renderFahrenheit({ value: Math.floor((value * 9) / 5 + 32) })}
     </div>
   );
 }
