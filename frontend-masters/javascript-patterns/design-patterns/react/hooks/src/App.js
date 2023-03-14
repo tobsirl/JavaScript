@@ -1,7 +1,10 @@
 import * as React from 'react';
 import './style.css';
-import Listings from './components/container/Listings';
+import { Listings } from './components/presentational/Listings';
+import useListings from './hooks/useListings';
 
 export default function App() {
-  return <Listings />;
+  const listings = useListings();
+  if (!listings) return null;
+  return <Listings listings={listings.listings} />;
 }
