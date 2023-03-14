@@ -1,5 +1,5 @@
 import React from 'react';
-import { Listings } from '../presentational/ListingsGrid.jsx';
+import { Listings } from '../presentational/Listings.jsx';
 
 export default function ListingsContainerComponent() {
   const [data, setData] = React.useState(null);
