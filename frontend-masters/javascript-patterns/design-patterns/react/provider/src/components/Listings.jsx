@@ -1,10 +1,10 @@
 import React from 'react';
 import { Listing } from './Listing';
 import { ListingsGrid } from './ListingsGrid';
-import useListings from '../hooks/useListings';
+import { useListingsContext } from '../context/ListingsProvider';
 
 export default function Listings() {
-  const listings = useListings();
+  const listings = useListingsContext();
 
   if (!listings) return null;
 
