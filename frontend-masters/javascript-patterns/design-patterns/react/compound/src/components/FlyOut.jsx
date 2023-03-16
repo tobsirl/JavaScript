@@ -1,20 +1,20 @@
 import React from 'react';
 
-const FlyoutContext = React.createContext(null);
+const FlyOutContext = React.createContext(null);
 
-export function Flyout(props) {
+export function FlyOut(props) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState('');
   const toggle = React.useCallback(() => setOpen((state) => !state), []);
   return (
-    <FlyoutContext.Provider value={{ open, value, toggle, setValue }}>
+    <FlyOutContext.Provider value={{ open, value, toggle, setValue }}>
       {props.children}
-    </FlyoutContext.Provider>
+    </FlyOutContext.Provider>
   );
 }
 
 function Input(props) {
-  const { value, toggle, setValue } = React.useContext(FlyoutContext);
+  const { value, toggle, setValue } = React.useContext(FlyOutContext);
 
   return (
     <div className="flyout">
@@ -32,7 +32,7 @@ function Input(props) {
 }
 
 function List(props) {
-  const { open } = React.useContext(FlyoutContext);
+  const { open } = React.useContext(FlyOutContext);
 
   return (
     open && (
@@ -44,7 +44,7 @@ function List(props) {
 }
 
 function Item(props) {
-  const { setValue } = React.useContext(FlyoutContext);
+  const { setValue } = React.useContext(FlyOutContext);
 
   return (
     <li
@@ -58,6 +58,6 @@ function Item(props) {
   );
 }
 
-Flyout.Input = Input;
-Flyout.List = List;
-Flyout.ListItem = Item;
+FlyOut.Input = Input;
+FlyOut.List = List;
+FlyOut.ListItem = Item;
