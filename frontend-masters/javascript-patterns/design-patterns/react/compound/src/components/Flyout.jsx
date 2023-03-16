@@ -31,6 +31,18 @@ function Input(props) {
   );
 }
 
+function List(props) {
+  const { open } = React.useContext(FlyoutContext);
+
+  return (
+    open && (
+      <div className="flyout-list">
+        <ul>{props.children}</ul>
+      </div>
+    )
+  );
+}
+
 export default function Input(props) {
   const listings = useListingsContext();
 
