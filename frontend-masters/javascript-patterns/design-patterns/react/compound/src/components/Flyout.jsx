@@ -43,37 +43,21 @@ function List(props) {
   );
 }
 
-export default function Input(props) {
-  const listings = useListingsContext();
+function Item(props) {
+  const { setValue } = React.useContext(FlyoutContext);
 
   return (
-    <div className="flyout">
-      <input
-        onFocus={toggle}
-        onBlur={toggle}
-        className="flyout-input"
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder="Enter an address, city ,or ZIP code"
-        {...props}
-      />
-      {open && (
-        <div className="flyout-list">
-          <ul>
-            {listings.map((listing) => (
-              <li
-                key={listing.id}
-                onMouseDown={() => {
-                  setValue(listing.name);
-                }}
-                className="flyout-list-item"
-              >
-                {listing.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
+    <li
+      onMouseDown={() => {
+        setValue(props.value);
+      }}
+      className="flyout-list-item"
+    >
+      {props.children}
+    </li>
   );
 }
+
+Flyout.Input = Input;
+Flyout.List = List;
+Flyout.ListItem = Item;
