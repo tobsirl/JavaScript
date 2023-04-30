@@ -89,12 +89,14 @@
 // })
 
 // Executor Errors
-const promise = new Promise((resolve, reject) => {
-  console.log('Executor');
-  throw new Error(42);
+// const promise = new Promise((resolve, reject) => {
+//   console.log('Executor');
+//   throw new Error("Uh oh!");
 
-});
+// });
 
-promise.catch((error) => {
-  console.log(error.message);
-});
+// promise.catch((error) => {
+//   console.log(error.message);
+// });
+
+// Creating Settled Promises
