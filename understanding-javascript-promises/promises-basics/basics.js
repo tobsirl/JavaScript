@@ -66,14 +66,24 @@
 // promise.then(callback, callback);
 
 // Assigning Handlers to Settled Promises
-const promise = fetch('https://jsonplaceholder.typicode.com/todos');
+// const promise = fetch('https://jsonplaceholder.typicode.com/todos');
 
-// original fulfillment handler
-promise.then((response) => {
-  console.log(response.status);
+// // original fulfillment handler
+// promise.then((response) => {
+//   console.log(response.status);
 
-  // now add another
-  promise.then((response) => {
-    console.log(response.statusText);
-  });
+//   // now add another
+//   promise.then((response) => {
+//     console.log(response.statusText);
+//   });
+// });
+
+// Creating New (Unsettled) Promises
+const promise = new Promise((resolve, reject) => {
+  console.log('Executor');
+  resolve(42);
 });
+
+promise.then((result) => {
+  console.log(result);
+})
