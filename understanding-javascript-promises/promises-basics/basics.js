@@ -51,16 +51,29 @@
 // });
 
 // Assigning Settlement Handlers with finally()
+// const promise = fetch('https://jsonplaceholder.typicode.com/todos');
+
+// promise.finally(() => {
+//   // no way to know if fulfilled or rejected
+//   console.log('This will always be executed');
+// });
+
+// // is the same as:
+// const callback = () => {
+//   console.log('This will always be executed');
+// };
+
+// promise.then(callback, callback);
+
+// Assigning Handlers to Settled Promises
 const promise = fetch('https://jsonplaceholder.typicode.com/todos');
 
-promise.finally(() => {
-  // no way to know if fulfilled or rejected
-  console.log('This will always be executed');
+// original fulfillment handler
+promise.then((response) => {
+  console.log(response.status);
+
+  // now add another
+  promise.then((response) => {
+    console.log(response.statusText);
+  });
 });
-
-// is the same as:
-const callback = () => {
-  console.log('This will always be executed');
-};
-
-promise.then(callback, callback);
