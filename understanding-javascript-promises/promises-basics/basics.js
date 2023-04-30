@@ -79,11 +79,29 @@
 // });
 
 // Creating New (Unsettled) Promises
+// const promise = new Promise((resolve, reject) => {
+//   console.log('Executor');
+//   resolve(42);
+// });
+
+// promise.then((result) => {
+//   console.log(result);
+// })
+
+// Executor Errors
 const promise = new Promise((resolve, reject) => {
   console.log('Executor');
-  resolve(42);
+  // throw new Error({ message: 'Executor error', result: 42 });
+  reject({ message: 'Executor error', result: 42 });
 });
 
-promise.then((result) => {
-  console.log(result);
-})
+promise
+  .then((res) => res.json())
+  .catch((error) => {
+    console.log(error.message);
+    console.log(error.result);
+  });
+
+// promise.catch((error) => {
+//   console.log(error.message);
+// });
