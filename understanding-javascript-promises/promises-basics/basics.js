@@ -49,3 +49,11 @@
 //     console.log('response is not ok');
 //   }
 // });
+
+// Assigning Settlement Handlers with finally()
+const promise = fetch('https://jsonplaceholder.typicode.com/todos');
+
+promise.finally(() => {
+  // no way to know if fulfilled or rejected
+  console.log('This will always be executed');
+});
