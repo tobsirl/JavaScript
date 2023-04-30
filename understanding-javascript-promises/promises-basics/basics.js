@@ -108,8 +108,20 @@
 // });
 
 // Using Promise.reject()
-const promise = Promise.reject(42);
+// const promise = Promise.reject(42);
 
-promise.catch((error) => {
-  console.log(error);
+// promise.catch((error) => {
+//   console.log(error);
+// });
+
+// Non-Promise Thenables
+const thenable = {
+  then(resolve, reject) {
+    resolve(42);
+  },
+};
+
+const promise = Promise.resolve(thenable);
+promise.then((result) => {
+  console.log(result);
 });
