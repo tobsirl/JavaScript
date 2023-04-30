@@ -6,7 +6,7 @@ promise.then(
   (response) => {
     // fulfillment
     console.log(response.status);
-    console.log(response)
+    console.log(response);
   },
   (reason) => {
     // rejection
@@ -18,4 +18,10 @@ promise.then(
 promise.then((response) => {
   // fulfillment
   console.log(response.statusText);
+});
+
+// add another rejection handler
+promise.catch((reason) => {
+  // rejection
+  console.log(reason.message);
 });
