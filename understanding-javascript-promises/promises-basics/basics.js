@@ -100,3 +100,16 @@
 // });
 
 // Creating Settled Promises
+// Using Promise.resolve()
+// const promise = Promise.resolve(42);
+
+// promise.then((result) => {
+//   console.log(result);
+// });
+
+// Using Promise.reject()
+const promise = Promise.reject(42);
+
+promise.catch((error) => {
+  console.log(error);
+});
