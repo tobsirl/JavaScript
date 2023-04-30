@@ -57,3 +57,10 @@ promise.finally(() => {
   // no way to know if fulfilled or rejected
   console.log('This will always be executed');
 });
+
+// is the same as:
+const callback = () => {
+  console.log('This will always be executed');
+};
+
+promise.then(callback, callback);
