@@ -39,3 +39,12 @@ promise.then(null, (reason) => {
   // rejection
   console.error(reason.message);
 });
+
+promise.then((response) => {
+  // fulfillment
+  if (response.ok) {
+    console.log('response is ok');
+  } else {
+    console.log('response is not ok');
+  }
+});
