@@ -121,7 +121,18 @@ const thenable = {
   },
 };
 
-const promise = Promise.resolve(thenable);
-promise.then((result) => {
-  console.log(result);
+const promiseResolve = Promise.resolve(thenable);
+promiseResolve.then((result) => {
+  console.log('resolve', result);
+});
+
+const thenableReject = {
+  then(resolve, reject) {
+    reject(42);
+  },
+};
+
+const promiseReject = Promise.reject(thenableReject);
+promiseReject.catch((error) => {
+  console.log('reject', error);
 });
