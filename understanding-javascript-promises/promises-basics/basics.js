@@ -13,3 +13,9 @@ promise.then(
     console.log(reason.message);
   }
 );
+
+// add another fulfillment handler
+promise.then((response) => {
+  // fulfillment
+  console.log(response.statusText);
+});
