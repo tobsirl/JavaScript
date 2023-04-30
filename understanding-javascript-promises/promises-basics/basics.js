@@ -91,17 +91,10 @@
 // Executor Errors
 const promise = new Promise((resolve, reject) => {
   console.log('Executor');
-  // throw new Error({ message: 'Executor error', result: 42 });
-  reject({ message: 'Executor error', result: 42 });
+  throw new Error(42);
+
 });
 
-promise
-  .then((res) => res.json())
-  .catch((error) => {
-    console.log(error.message);
-    console.log(error.result);
-  });
-
-// promise.catch((error) => {
-//   console.log(error.message);
-// });
+promise.catch((error) => {
+  console.log(error.message);
+});
