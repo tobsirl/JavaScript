@@ -40,6 +40,7 @@ promise.then(null, (reason) => {
   console.error(reason.message);
 });
 
+// fetch() will return a even if the response is not ok
 promise.then((response) => {
   // fulfillment
   if (response.ok) {
