@@ -1,6 +1,8 @@
 # 1. Promise Basics
 
-## 1.1. What is a Promise?
+## The Promise Lifecycle
+
+Each promise has a lifecycle that starts in the pending state, then transitions to either fulfilled or rejected. Once a promise is fulfilled or rejected, it is immutable (i.e. it can never change again).
 
 ```javascript
 const promise = fetch('https://jsonplaceholder.typicode.com/todos');
