@@ -188,3 +188,23 @@ function popElement(arr) {
   arr.pop();
   return arr;
 }
+
+// Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right (8kyu)
+// https://www.codewars.com/kata/57faf7275c991027af000679/train/javascript
+// Description:
+// Remove n exclamation marks in the sentence from left to right. n is positive integer.
+// Examples
+// remove("Hi!",1) === "Hi"
+// remove("Hi!",100) === "Hi"
+// remove("Hi!!!",1) === "Hi!!"
+function remove(s, n) {
+  let arr = s.split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (n > 0 && arr[i] === "!") {
+      arr.splice(i, 1);
+      i--;
+      n--;
+    }
+  }
+  return arr.join("");
+}
