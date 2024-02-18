@@ -96,7 +96,8 @@
       // optionButtons should be all the elements within the "options" div
       // explanation should be the "explanation" div
       const statement = document.getElementById("statement");
-      const optionButtons = document.querySelectorAll("#options button");
+      const [buttonTrue, buttonFalse] =
+        document.querySelectorAll("#options button");
 
       // TODO 2: Declare & assign a variable called fact
       // Its value should be an object with a statement, true/false answer, and explanation
