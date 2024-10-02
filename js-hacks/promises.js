@@ -1,8 +1,11 @@
 function testPromises() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve("done");
+      resolve("Promise resolved");
     }, 1000);
+  }).catch((error) => {
+    console.log("🚀 ~ error", error);
+    reject(error);
   });
 }
 
