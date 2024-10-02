@@ -6,14 +6,14 @@ function testPromises() {
   });
 }
 
-const test = testPromises();
-test
+const response = testPromises();
+response
   .then((result, test) => {
     console.log("🚀 ~ result", result);
     test = "test";
     return [result, test];
   })
   .then((result) => {
-    console.log("🚀 ~ result1", result.result);
-    console.log("🚀 ~ test", result.test);
+    console.log("🚀 ~ result1", result[0]);
+    console.log("🚀 ~ test", result[1]);
   });
