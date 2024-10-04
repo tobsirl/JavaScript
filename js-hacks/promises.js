@@ -33,14 +33,14 @@ function fetchSWAPI() {
     });
 }
 
-fetchSWAPI().then(({ data, planet }) => {
+fetchSWAPI().then(({ data: { name, height }, planet: { climate } }) => {
   console.log(
-    data.name,
-    data.height,
+    name,
+    height,
     data.mass,
     data.hair_color,
     data.skin_color,
     data.eye_color
   );
-  console.log("🚀 ~ response", planet.climate);
+  console.log("🚀 ~ response", climate);
 });
