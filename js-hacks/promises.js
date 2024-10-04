@@ -25,11 +25,22 @@ function fetchSWAPI() {
   return fetch("https://swapi.dev/api/people/1")
     .then((response) => response.json())
     .then((data) => {
-      console.log("🚀 ~ data", data);
-      return data;
+      return fetch("https://swapi.dev/api/planets/1")
+        .then((response) => response.json())
+        .then((planet) => {
+          return { ...data, ...planet };
+        });
     });
 }
 
-fetchSWAPI().then(({ name, a, b, c, d, f }) => {
-  console.log({ name, a, b, c, d, f });
+fetchSWAPI().then(({ data, planet }) => {
+  console.log(
+    data.name,
+    data.height,
+    data.mass,
+    data.hair_color,
+    data.skin_color,
+    data.eye_color
+  );
+  console.log("🚀 ~ response", planet.climate);
 });
