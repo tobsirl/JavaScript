@@ -22,6 +22,10 @@ class Person {
   greet() {
     console.log(`Hello, my name is ${this.name}.`);
   }
+
+  species() {
+    return "Homo sapiens";
+  }
 }
 
 // Subclass
@@ -35,6 +39,10 @@ class Employee extends Person {
   greet() {
     console.log(`Hello, my name is ${this.name} and I am a ${this.jobTitle}.`);
   }
+
+  species() {
+    return "Homo sapiens";
+  }
 }
 
 // Create an instance of the Person class
@@ -43,10 +51,10 @@ console.log(person.info); // Output: Alice is 30 years old.
 person.greet(); // Output: Hello, my name is Alice.
 person.info = "Bob 40";
 console.log(person.info); // Output: Bob is 40 years old.
-console.log(Person.species()); // Output: Homo sapiens
+console.log(person.species()); // Output: Homo sapiens
 
 // Create an instance of the Employee subclass
 const employee = new Employee("Charlie", 35, "developer");
 console.log(employee.info); // Output: Charlie is 35 years old.
 employee.greet(); // Output: Hello, my name is Charlie and I am a developer.
-console.log(Employee.species()); // Output: Homo sapiens
+console.log(employee.species()); // Output: Homo sapiens
