@@ -1,9 +1,6 @@
 // Use default values for arguments
 
-function calculateTax(price, tax) {
-  if (tax == undefined) {
-    tax = 0.2;
-  }
+function calculateTax(price, tax = 0.2) {
   return price + price * tax;
 }
 
