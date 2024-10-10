@@ -1,8 +1,14 @@
 /*
 Change the following code to use globalThis
 */
-window.scrollX = 10;
-global.setTimeout(() => {
+globalThis.scrollX = 10;
+globalThis.setTimeout(() => {
   console.log("Hey"), 3000;
 });
-self.addEventListener("fetch", () => {});
+globalThis.addEventListener("fetch", () => {});
+
+globalThis.scrollX = 10;
+globalThis.setTimeout(() => {
+  console.log("Hey"), 3000;
+});
+globalThis.addEventListener("fetch", () => {});
