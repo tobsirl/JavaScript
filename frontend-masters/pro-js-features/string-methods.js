@@ -9,3 +9,8 @@ console.log(str.includes("o, w"));
 const original = "abc";
 const result = original.repeat(3);
 console.log(result);
+
+const strpadding = "5";
+const paddedStart = strpadding.padStart(5);
+const paddedEnd = strpadding.padEnd(5);
+console.log(paddedStart, paddedEnd);
