@@ -5,7 +5,7 @@ console.log("🚀 ~ userGroups:", userGroups);
 const segment = "gender";
 const segmentKey = "male";
 const nestedSegment = "position_type";
-const nestedSegmentKey = "default";
+const nestedSegmentKey = "instagram_stream";
 
 const nestUserGroup = Object.keys(
   userGroups[segment][segmentKey][nestedSegment][nestedSegmentKey]
