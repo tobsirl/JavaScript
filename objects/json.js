@@ -3,6 +3,7 @@ import state from "./spec.json" assert { type: "json" };
 const userGroup = "user_groups";
 const segment = "age";
 const nestedSegment = "18-24";
+const nestedSegmentKey = "position_type";
 
 // console.log(state.user_groups.age);
 
@@ -21,11 +22,12 @@ const userGroups = nestedUserGroups.map((nestedUserGroupsKey) => {
 // console.log(userGroups);
 
 // add an new segment to the user_groups
-const newSegment = { new_segment: { new_group: 100 } };
-const addNewSegment = (state[userGroup][segment][nestedSegment].position_type =
-  {
-    ...state[userGroup][segment][nestedSegment].position_type,
-    ...newSegment,
-  });
+const newSegment = { [nestedSegmentKey]: { new_group: 100 } };
+const addNewSegment = (state[userGroup][segment][nestedSegment][
+  nestedSegmentKey
+] = {
+  ...state[userGroup][segment][nestedSegment][nestedSegmentKey],
+  ...newSegment,
+});
 
 console.log(addNewSegment);
