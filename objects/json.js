@@ -22,9 +22,10 @@ const userGroups = nestedUserGroups.map((nestedUserGroupsKey) => {
 
 // add an new segment to the user_groups
 const newSegment = { new_segment: { new_group: 100 } };
-const addNewSegment = (state[userGroup][segment]["18-24"].position_type = {
-  ...state[userGroup][segment]["18-24"].position_type,
-  ...newSegment,
-});
+const addNewSegment = (state[userGroup][segment][nestedSegment].position_type =
+  {
+    ...state[userGroup][segment][nestedSegment].position_type,
+    ...newSegment,
+  });
 
 console.log(addNewSegment);
