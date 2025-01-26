@@ -1,0 +1,54 @@
+{
+  "user_groups": {
+    "age": {
+      "18-24": {
+        "position_type": {
+          "instagram_stream": 0.7,
+          "facebook_feed": 0.75,
+          "instagram_story": 1,
+          "default": 1
+        }
+      },
+      "25-34": {
+        "position_type": {
+          "instagram_stream": 0.7,
+          "facebook_feed": 0.75,
+          "instagram_story": 1,
+          "default": 1
+        }
+      },
+      "35-44": {
+        "position_type": {
+          "instagram_stream": 0.6,
+          "facebook_feed": 0.64,
+          "instagram_story": 0.85,
+          "default": 0.85
+        }
+      },
+      "45-54": {
+        "position_type": {
+          "instagram_stream": 0.63,
+          "facebook_feed": 0.68,
+          "instagram_story": 0.9,
+          "default": 0.9
+        }
+      },
+      "55-64": {
+        "position_type": {
+          "instagram_stream": 0.56,
+          "facebook_feed": 0.6,
+          "instagram_story": 0.8,
+          "default": 0.8
+        }
+      },
+      "65-100": {
+        "position_type": {
+          "instagram_stream": 0.53,
+          "facebook_feed": 0.56,
+          "instagram_story": 0.75,
+          "default": 0.75
+        }
+      }
+    }
+  }
+}
