@@ -1,0 +1,14 @@
+{
+  "user_groups": {
+    "gender": {
+      "male": {
+        "position_type": {
+          "instagram_stream": 0.7,
+          "facebook_feed": 0.75,
+          "instagram_story": 1,
+          "default": 1
+        }
+      }
+    }
+  }
+}
