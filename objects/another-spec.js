@@ -6,8 +6,6 @@ Object.keys(userGroups).forEach((gender) => {
   console.log(`Gender: ${gender}`);
   const devicePlatforms = userGroups[gender].device_platform;
   Object.keys(devicePlatforms).forEach((platform) => {
-    console.log(
-      `  Platform: ${platform}, Version: ${devicePlatforms[platform]}`
-    );
+    console.log(`  Platform: ${platform} ${devicePlatforms[platform]}`);
   });
 });
