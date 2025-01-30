@@ -1,0 +1,27 @@
+{
+  "user_groups": {
+    "gender": {
+      "female": {
+        "device_platform": {
+          "mobile": "1.0",
+          "desktop": "1.0",
+          "default": "1.0"
+        }
+      },
+      "male": {
+        "device_platform": {
+          "mobile": "1.0",
+          "desktop": "1.0",
+          "default": "1.0"
+        }
+      },
+      "default": {
+        "device_platform": {
+          "mobile": "1.0",
+          "desktop": "1.0",
+          "default": "1.0"
+        }
+      }
+    }
+  }
+}
