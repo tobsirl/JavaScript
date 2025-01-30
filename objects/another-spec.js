@@ -1,11 +1,19 @@
-import state from "./another-spec.json" assert { type: "json" };
+import state from "./spec.json" assert { type: "json" };
 
-const userGroups = state.user_groups.gender;
+const userGroups = state.user_groups;
 
-Object.keys(userGroups).forEach((gender) => {
-  console.log(`Gender: ${gender}`);
-  const devicePlatforms = userGroups[gender].device_platform;
-  Object.keys(devicePlatforms).forEach((platform) => {
-    console.log(`  Platform: ${platform} ${devicePlatforms[platform]}`);
+Object.keys(userGroups).forEach((groupKey) => {
+  console.log(`Group: ${groupKey}`);
+  const group = userGroups[groupKey];
+  Object.keys(group).forEach((subGroupKey) => {
+    console.log(`  SubGroup: ${subGroupKey}`);
+    const subGroup = group[subGroupKey];
+    Object.keys(subGroup).forEach((typeKey) => {
+      console.log(`    Type: ${typeKey}`);
+      const type = subGroup[typeKey];
+      Object.keys(type).forEach((itemKey) => {
+        console.log(`      ${itemKey}: ${type[itemKey]}`);
+      });
+    });
   });
 });
