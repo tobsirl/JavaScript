@@ -1,4 +1,4 @@
-import state from "./spec.json" assert { type: "json" };
+import state from "./test.json" assert { type: "json" };
 
 const userGroups = state.user_groups;
 
